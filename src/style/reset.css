@@ -1,0 +1,15 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+button {
+	cursor: pointer;
+}
+
+button, input, table {
+	font: inherit;
+	background: transparent;
+	border: none;
+}

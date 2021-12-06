@@ -1,0 +1,11 @@
+body {
+	background: var(--background);
+	color: var(--foreground);
+	font-size: var(--font-size);
+	font-family: var(--font-family);
+
+	/* midtstiller alt */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
