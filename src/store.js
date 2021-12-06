@@ -1,5 +1,7 @@
 export default {
 	state() {
-		return {}
+		return {
+			pages: []
+		}
 	},
 };

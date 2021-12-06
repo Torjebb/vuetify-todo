@@ -1,0 +1,155 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+button {
+	cursor: pointer;
+}
+button, input, table {
+	font: inherit;
+	background: transparent;
+	border: none;
+}
+:root {
+	--background: white;
+	--foreground: black;
+	
+	--font-family: "Unica77 LL";
+	--font-size: 20px;
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('/fonts/Inter-Regular.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+	background: var(--background);
+	color: var(--foreground);
+	font-size: var(--font-size);
+	font-family: var(--font-family);
+
+	/* midtstiller alt */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.todo-icon {
+		width: 100%;
+		height: 100%;
+		display: block;
+		overflow: visible;
+}
+.todo-icon line,
+	.todo-icon circle {
+		stroke: var(--foreground);
+}
+
+.todo-item {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: center;
+		background: white;
+		margin-bottom: 0.25em;
+		padding: 0.5em 0.8em;
+		color: var(--foreground);
+		border-radius: var(--border-radius);
+}
+.todo-item--done {
+		color: var(--highlight);
+}
+.todo-item--done circle {
+		fill: var(--highlight);
+		stroke: var(--highlight);
+}
+.todo-item__button {
+		--size: 0.8em;
+
+		min-width: var(--size);
+		min-height: var(--size);
+		width: var(--size);
+		height: var(--size);
+}
+.todo-item__button:hover line {
+		stroke: var(--highlight);
+}
+.todo-item__button:hover circle {
+		fill: var(--highlight);
+		stroke: var(--highlight);
+}
+.todo-item__task {
+		flex-grow: 2;
+		padding: 0.1em 0.5em 0;
+}
+.todo-item__task input {
+		width: 100%;
+		outline: 0;
+}
+
+.todo-list {
+		/* 
+			variabler fra figma 
+		*/
+
+		--background: #f1f1f1;
+		--foreground: #000000;
+		--inactive: #b0b0b0;
+		--highlight: #ff2e00;
+		--border-radius: 0.5em;
+
+		position: relative;
+		width: 40vw;
+		height: 80vh;
+		background: var(--background);
+		border-radius: var(--border-radius);
+		padding: 1em;
+		display: flex;
+		flex-flow: column nowrap;
+}
+.todo-list__header {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		align-items: center;
+		color: var(--highlight);
+		font-size: 1.5em;
+		padding: 0 0.2em;
+		margin-bottom: 0.5em;
+}
+.todo-list__add-new {
+		--size: 0.8em;
+
+		min-width: var(--size);
+		min-height: var(--size);
+		width: var(--size);
+		height: var(--size);
+
+		margin-bottom: 0.15em;
+}
+.todo-list__add-new line {
+		stroke: var(--highlight);
+}
+.todo-list__add-new:hover line {
+		stroke: var(--foreground);
+}
+.todo-list__separator {
+		border: 1px solid var(--inactive);
+		margin: 1em 0;
+		opacity: 0.5;
+}
+.todo-list__content {
+		overflow: scroll;
+		display: flex;
+		flex-flow: column nowrap;
+		flex-grow: 2;
+		color: var(--inactive);
+		z-index: 0;
+}
+.todo-list__cta-add {
+		flex-grow: 2;
+		padding: 1em;
+		color: var(--inactive);
+}
